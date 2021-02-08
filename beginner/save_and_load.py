@@ -24,3 +24,61 @@ def create_model():
                   metrics=['accuracy'])
 
     return model
+
+
+# model = create_model()
+
+checkpoint_path = './training_1/cp.ckpt'
+# checkpoint_dir = os.path.dirname(checkpoint_path)
+#
+# cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
+#                                                  save_best_only=True,
+#                                                  verbose=1)
+#
+# model.fit(train_images, train_labels, epochs=10, validation_data=(test_images, test_labels),
+#           callbacks=[cp_callback])
+
+# model = create_model()
+#
+# loss, acc = model.evaluate(test_images, test_labels, verbose=2)
+# print("Accuracy of untrained model: {:5.2f}%".format(100*acc))
+#
+# model.load_weights(checkpoint_path)
+#
+# loss, acc = model.evaluate(test_images, test_labels, verbose=2)
+# print("Accuracy of trained model: {:5.2f}%".format(100*acc))
+#
+
+# checkpoint_path = "training_2/cp-{epoch:04d}.ckpt"
+# checkpoint_dir = os.path.dirname(checkpoint_path)
+#
+# cp_callback = tf.keras.callbacks.ModelCheckpoint(
+#     filepath=checkpoint_path,
+#     verbose=1,
+#     save_best_only=True,
+#     period=5
+# )
+#
+# model = create_model()
+#
+# model.save(checkpoint_path.format(epoch=0))
+#
+# model.fit(train_images,
+#           train_labels,
+#           epochs=50,
+#           callbacks=[cp_callback],
+#           validation_data=(test_images, test_labels),
+#           verbose=0)
+
+# model = create_model()
+# model.fit(train_images, train_labels, epochs=5)
+#
+# model.save('saved_model/my_model')
+
+# new_model = tf.keras.models.load_model('./saved_model/my_model')
+#
+# loss, acc = new_model.evaluate(test_images, test_labels, verbose=2)
+#
+# print('복원된 모델의 정확도: {:5.2f}%'.format(100*acc))
+#
+# print(new_model.predict(test_images).shape)
