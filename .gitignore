@@ -6,3 +6,8 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+/beginner/my_dir/
+/beginner/saved_model/
+/beginner/training_1/
+/beginner/training_2/
